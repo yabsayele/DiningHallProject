@@ -1,0 +1,81 @@
+<header>
+  <section class="header1">
+    <h1>Northwestern</h1>
+  </section>
+
+  <div class="signup">
+        <form class="modal-content" action="/signup" method="post"> <!--create this page?-->
+          <div class = "modal-container">
+            <h1> Sign Up</h1>
+
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Enter your username" required/>
+
+            <label for="mealplan">Meal Plan</label>
+            <input type="text" name="mealplan" id="mealplan" placeholder="Enter your meal plan" required/>
+
+            <label for="mealspecifications">Meal Specifications</label>
+            <input type="text" name="mealspecifications" id="mealspecifications" placeholder="Enter your meal specifications"/>
+
+            <!-- <label for= "password"<b>Password</b></label>
+            <input name="password" type= "password"
+            placeholder="Enter Password"> -->
+
+            <div class ="clearfix">
+              <button type ="submit" class="signup"> Sign Up</button>
+            </div>
+          </div>
+        </form>
+  </div>
+
+  <div class="login">
+        <form class="modal-content" action="/dining-halls" method="post"> <!--create this page?-->
+          <div class = "modal-container">
+            <h1> Login</h1>
+
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Enter your username" required/>
+
+            <label for="mealplan">Meal Plan</label>
+            <input type="text" name="mealplan" id="mealplan" placeholder="Enter your meal plan" required/>
+
+            <!-- <label for= "password"<b>Password</b></label>
+            <input name="password" type= "password"
+            placeholder="Enter Password"> -->
+
+            <div class ="clearfix">
+              <button type ="submit" class="login"> Login</button>
+            </div>
+          </div>
+        </form>
+  </div>
+
+
+</header>
+
+<main>
+
+  <section class="section1">
+
+    <header class="header2">
+      <h2>All Options</h2>
+    </header>
+
+    <div class= "container">
+
+      {{#each dininghalls }}
+          <article class="card">
+            <div class= "cardinfo">
+              <h2>{{this.name}} </h2>
+              <p>{{this.hours}}</p>
+            </div>
+            <div class='cardimage'>
+              <img src='{{this.picture}}'/>
+            </div>
+            <a href="/dining-halls/{{this._id}}"> More Info </a>
+          </article>
+      {{/each}}
+
+    </div>
+
+</main>

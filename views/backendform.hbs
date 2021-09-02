@@ -1,0 +1,88 @@
+<h1> Create A New User </h1>
+
+<div class="backend-form">
+  <form action="/backend" method="post">
+    <div class="form-control">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Enter your username"
+      />
+    </div>
+    <div class="form-control">
+      <label for="mealplan">Meal Plan</label>
+      <input
+        type="text"
+        name="mealplan"
+        id="mealplan"
+        placeholder="Enter your meal plan"
+      />
+    </div>
+    <div class="form-control">
+      <label for="mealspecifications">Meal Specifications</label>
+      <input
+        type="text"
+        name="mealspecifications"
+        id="mealspecifications"
+        placeholder="Enter your meal specifications"
+      />
+    </div>
+    <div class="form-control">
+      <button type="submit" class="btn">Submit</button>
+    </div>
+  </form>
+</div>
+
+<h1> Update A User's Information </h1>
+
+{{message}}
+
+<div class="backend-form">
+  <form action="/backend/{{user._id}}" method="post">
+    <div class="form-control">
+      <label for="id">User's ID</label>
+      <input
+        type="text"
+        name="id"
+        id="id"
+        value="{{user._id}}"
+        placeholder="Enter the user's ID"
+      />
+    </div>
+    <div class="form-control">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        value="{{user.username}}"
+        placeholder="Enter your username"
+      />
+    </div>
+    <div class="form-control">
+      <label for="mealplan">Meal Plan</label>
+      <input
+        type="text"
+        name="mealplan"
+        id="mealplan"
+        value="{{user.mealplan}}"
+        placeholder="Enter your meal plan"
+      />
+    </div>
+    <div class="form-control">
+      <label for="mealspecifications">Meal Specifications</label>
+      <input
+        type="text"
+        name="mealspecifications"
+        id="mealspecifications"
+        value="{{user.mealspecifications}}"
+        placeholder="Enter your meal specifications"
+      />
+    </div>
+    <div class="form-control">
+      <button type="submit" class="btn">Submit</button>
+    </div>
+  </form>
+</div>

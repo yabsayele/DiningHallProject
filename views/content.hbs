@@ -1,0 +1,119 @@
+<header>
+
+       <!-- University Header -->
+       <section class="header1">
+        <h1>Northwestern</h1>
+       </section>
+
+    <div class="userinformation">
+        <!--Button to open the modal-->
+        <button onclick="document.getElementById('id01').style.display='block'">
+           Sign Up</button>
+
+        <div id="id01" class = "modal">
+          <span onclick="document.getElementById('id01').style.display='none'"
+          class = "close" title= "Close Modal"> times;</span>
+          <form class="modal-content" action="/action_page.php"> <!--create this page?-->
+            <div class = "modal-container">
+              <h1> Sign Up</h1>
+              <hr>
+              <label for = "email"> <b> Email</b></label>
+              <input name= "email" type="text"
+              placeholder="me@u.northwestern.edu" required>
+
+              <label for= "password"<b>Password</b></label>
+              <input name="password" type= "password"
+              placeholder="Enter Password" required>
+
+              <div class ="clearfix">
+                <button type = "button"
+                onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbutton">Cancel</button>
+                <button type ="submit" class="signup"> Sign Up</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <button> Login </button>
+    </div>
+
+     <!-- Navigation -->
+       <nav>
+         <form>
+           <!-- Search -->
+         <label for="search"> Search </label>
+         <input id = "search" name = "search"
+                type="search" placeholder="Enter A Dining Hall">
+
+        </form>
+    <!-- Linking Pickup Order page -->
+        <a href="pickuporder.html"><button> View Pickup Order </button></a>
+       </nav>
+   </header>
+
+   <main>
+      <section class="section1">
+         <!-- Near you menu -->
+         <header class="header2">
+            <h2>Near You</h2>
+         </header>
+
+         <div class="scrollmenu">
+
+           <a href="indexsargent.html"
+             <article class="card">
+               <p> Sargent Dining Hall</p>
+               <img src='images/133.jpg'/>
+             </article>
+            </a>
+
+           <article class="card">
+             <p>Foster Walker Plex East</p>
+             <img src='images/foster-walker.jpg'/>
+           </article>
+
+           <article class="card">
+             <p>Foster Walker Plex West</p>
+             <img src='images/foster-walker.jpg'/>
+           </article>
+
+           <article class="card">
+             <p> Elder Dining Commons</p>
+             <img src='images/allisonhall0209.jpg'/>
+           </article>
+
+           <article class="card">
+             <p> Lisa's Cafe Featuring Plum Market</p>
+             <img src='images/133.jpg'/>
+           </article>
+
+           <article class="card">
+             <p>Tech Express</p>
+             <img src='images/133.jpg'/>
+           </article>
+
+         </div>
+     </section>
+
+    <section class="section2">
+       <!-- All Options Header -->
+       <header class="header3">
+          <h2>All Options</h2>
+       </header>
+
+      <div class="container">
+
+        <!-- card 1 -->
+        <article class="card">
+           <div class="cardinfo">
+             <p>BUILD pizza by design</p>
+             <p>8AM-8PM</p>
+           </div>
+           <div class='cardimage'>
+             <img src='images/allisonhall0209.jpg'/>
+           </div>
+        </article>
+      </div>
+    </section>
+  </main>

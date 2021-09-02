@@ -1,0 +1,36 @@
+<header>
+  <h1> This Is the {{title}} Page</h1>
+  <p> Please Select your packaged item</p>
+</header>
+
+
+
+<!-- {{#each menuoptions }}
+    <article class="card">
+        <p>{{this.item}} ({{this.ingredients}})</p>
+        <p>{{this.dininghall}} ({{this.station}})</p>
+    </article>
+{{/each}} -->
+
+
+<main>
+  <form action="?">
+    {{#each menuoptions }}
+
+      <input type="checkbox" id="ComfortOption1" name="ComfortOption1" value="{{this.item}}">
+      <label for="{{this.item}}"> {{this.item}}
+        <td style="width: 100px;">
+            <select>
+                <option value="sm">Small</option>
+                <option value="md">Medium</option>
+                <option value="lg">Large</option>
+            </select>
+        <td>
+        </label><br>
+        <p>Ingredients: {{this.ingredients}} </p>
+
+    {{/each}}
+    <input type="submit" value="Add to my Order">
+
+  </form>
+</main>

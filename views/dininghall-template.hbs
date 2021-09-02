@@ -1,0 +1,12 @@
+<div class= "header">
+  <h1>{{dininghall.name}}</h1>
+  <div class='cardimage'>
+    <img src='{{dininghall.picture}}'/>
+  </div>
+  <p>Hours: {{dininghall.hours}}</p>
+</div>
+  {{#each dininghall.station }}
+    <article class="card">
+        <a href="/menu-options/{{this}}">{{this}} </a>
+    </article>
+    {{/each}}

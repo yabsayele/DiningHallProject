@@ -1,0 +1,16 @@
+<h1>Pickup Order</h1>
+
+<section class="header1">
+  <h1>Pickup Order</h1>
+  <p>Pickup Time: 5:00 PM </p>
+  <p>Pickup Location: Sargent Dining Commons</p>
+  <p>Pickup Number: 15</p>
+</section>
+
+<h2>Cart</h2>
+
+{{#each selecteditems }}
+    <article class="card">
+        <p>{{this.item}}</p>
+    </article>
+{{/each}}
